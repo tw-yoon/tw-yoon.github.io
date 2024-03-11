@@ -337,7 +337,6 @@ section .wave.wave4 {
     /* Centers the content horizontally */
     gap: 20px;
     /* Adds some space between the image and the bio content */
-    margin-bottom: 10%;
 }
 
 .bio-image img {
@@ -669,39 +668,18 @@ p {
     transform: scale(2);
     z-index:10;
 }
-
-
-
-.image-section img:hover::after {
-    content: "Your text here";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 18px;
-    opacity: 1;
-}
-
-.image-container:hover::after {
-    opacity: 1;
-}
 /*--------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------*/
 .contact-section {
+    
     text-align: center; /* Centers the content */
     display: flex;
     justify-content: center; /* Centers items horizontally for flexbox */
     align-items: center; /* Centers items vertically for flexbox */
     flex-direction: row; /* Arranges items in a row */
     padding: 20px; /* Adds some padding around */
+    margin-top: 10%;
 }
 
 .email-link, .linkedin-icon {
