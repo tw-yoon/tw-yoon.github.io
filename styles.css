@@ -95,10 +95,10 @@ section .wave {
     top: 0;
     left: 0;
     width: 100%;
-    height: 400px; /* Adjust based on your preference */
+    height: 400px;
     background: url('wave/newave3.png') repeat-x;
-    background-size: 1500px 300px; /* This might work better for full coverage */
-    z-index: -2; /* Ensures the wave is behind the text */
+    background-size: 1500px 300px;
+    z-index: -2;
 }
 
 section .wave.wave1 {
@@ -144,17 +144,10 @@ section .wave.wave4 {
 }
 
 .section-title {
-    /* Add your specific styles for the h2 tag here */
-    /* Example styles: */
     font-size: 40px;
-    /* Adjust the size as needed */
     color: #000;
-    /* This sets the text color to black */
     margin: 0;
-    /* This removes the default margin */
     padding: 0;
-    /* This removes the default padding */
-    /* Add more styles as needed */
     font-family: forma-djr-display, sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -163,15 +156,11 @@ section .wave.wave4 {
 .landing-page {
     display: flex;
     flex-direction: column;
-    /* Aligns items vertically */
     justify-content: center;
-    /* Centers items vertically in the container */
     align-items: flex-end;
-    /* Aligns items to the right side of the container */
     width: 100vw;
     height: 350px;
     position: relative;
-    /* Establishes a positioning context */
     user-select: none;
 }
 
@@ -192,9 +181,9 @@ section .wave.wave4 {
 }
 
 .landing-page p {
-    font-size: 30px; /* Adjust as needed */
+    font-size: 30px;
     font-weight: 500;
-    top: 50%; /* Adjust the first paragraph's position if necessary */
+    top: 50%;
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -206,9 +195,8 @@ section .wave.wave4 {
     justify-content: center;
     align-items: center;
     height: 60vh;
-    z-index: 5; /* Default stacking order */
+    z-index: 5;
     overflow: visible;
-    /* To ensure no overflow from skewed images */
 }
 
 .img-accordion {
@@ -217,24 +205,18 @@ section .wave.wave4 {
     cursor: pointer;
     margin: auto;
     justify-content: center;
-    /* Center children horizontally */
-    align-items: center; /* flex-start center flex-end to change*/
-    /* Align children at the top */
+    align-items: center;
     overflow: hidden;
-    /* Hide overflow */
 }
 
 .img-accordion a.img {
     display: block;
-    /* Ensures the anchor tag behaves like a block-level element */
     flex: 1;
     background-size: cover;
     background-position: center;
     transition: all 0.5s;
     aspect-ratio: 1 / 1;
-    /* Maintain a square aspect ratio */
     text-decoration: none;
-    /* Removes underline from links */
 }
 
 .img1 {
@@ -257,7 +239,6 @@ section .wave.wave4 {
     background-image: url("1x/small-steering3.png");
 }
 
-/* Adjust the hover state for .img to specify width and height */
 .img-accordion a.img:hover {
     flex-grow: 2;
     background-color: rgba(188, 251, 15, 1);
@@ -267,25 +248,20 @@ section .wave.wave4 {
 .description-box {
     display: none;
     position: relative;
-    /* Hidden by default */
-    width: 650px; /* Maximum width */
+    width: 650px;
     height: 180px;
     padding: 10px;
-    margin: 20px auto; /* Center the box and add some vertical space */
-    /* Center the box */
+    margin: 20px auto;
     background: white;
 
     z-index: 10;
     text-align: left;
     overflow: hidden;
-    /* Add more styles as needed */
 }
 
 .description-box h3 {
     margin-top: 0px;
     margin-bottom: 0px;
-    /* Adjust spacing */
-    /* Indent bullet points */
     font-size: 40px;
     font-family: forma-djr-display, sans-serif;
     font-weight: 600;
@@ -294,10 +270,8 @@ section .wave.wave4 {
 }
 
 .description-box p {
-    /* Indent bullet points */
     margin-top: 0;
     margin-bottom: 10px;
-    /* Adjust spacing */
     font-size: 20px;
     font-family: forma-djr-text, sans-serif;
     font-weight: 400;
@@ -308,16 +282,12 @@ section .wave.wave4 {
 .see-more {
     position: absolute;
     display: inline-block;
-    /* Make the element's width fit its content */
     padding: 3px 5px;
-    /* Add some padding around the text for better appearance */
     right: 10px;
-    /* Adjusted from 'right' to 'margin-right' for proper spacing */
     bottom: 10px;
     font-size: 20px;
     border: 1px solid black;
     background-color: rgba(188, 251, 15, 1);
-    /* Specific background color */
     color: black;
     text-align: center;
     font-family: forma-djr-text, sans-serif;
@@ -332,37 +302,26 @@ section .wave.wave4 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* Centers the content vertically */
     justify-content: center;
-    /* Centers the content horizontally */
     gap: 20px;
-    /* Adds some space between the image and the bio content */
 }
 
 .bio-image img {
     width: 300px;
-    /* Adjust the width as necessary */
     height: 400px;
-    /* Keeps the aspect ratio of the image */
 }
 
 .content-buttons-container {
-    /* This container will hold both the bio content and the buttons */
     display: flex;
     flex-direction: row;
-    /* Stack content and buttons vertically */
     align-items: center;
-    /* Center-align the items for a cohesive look */
     gap: 20px;
-    /* Space between your bio content and the buttons */
 }
 
 .bio-content {
     max-width: 600px;
-    /* Adjust based on your preference */
     width: 100%;
     text-align: left;
-    /* Aligns the text to the left */
     font-size: 20px;
     font-family: forma-djr-text, sans-serif;
     font-weight: 400;
@@ -373,65 +332,44 @@ section .wave.wave4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Center-align the items if desired */
     gap: 10px;
-    /* Space between each button/link */
 }
 
 .button-style {
     display: inline-block;
     width: 80px;
-    /* Set a specific width */
     height: 30px;
-    /* Set a specific height */
     line-height: 30px;
-    /* Align text vertically */
     margin: 5px;
-    /* Adjust as needed */
     background-color: white;
-    /* Button color */
     color: black;
-    /* Text color */
     font-family: forma-djr-text, sans-serif;
     font-weight: 500;
     font-style: normal;
     border: 1px solid black;
-    /* Adds a 1px black border */
     text-decoration: none;
-    /* Removes underline from the link */
     text-align: center;
     font-size: 16px;
-
-    /* Adjust font size as needed */
     cursor: pointer;
-    /* Changes the cursor to a pointer on hover */
     box-sizing: border-box;
 }
 
-/* Styles for the resume button, if not already styled */
 .resume-button {
     display: inline-block;
     background-color: white;
-    /* Button color */
     color: black;
-    /* Text color */
     font-family: forma-djr-text, sans-serif;
     font-weight: 500;
     font-style: normal;
     border: 1px solid black;
-
-    /* Adds a 1px black border */
     text-decoration: none;
-    /* Removes underline from the link */
     text-align: center;
     font-size: 16px;
-    /* Adjust font size as needed */
 }
 
 .button-style:hover,
 .resume-button:hover {
     background-color: rgba(188, 251, 15, 1);
-    /* Change to your preferred hover background color */
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -442,13 +380,13 @@ section .wave.wave4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1020px; /* Maximum width */
-    width: 100%; /* Make the width responsive */
+    max-width: 1020px;
+    width: 100%;
     height: 300px;
     position: relative;
     user-select: none;
-    margin-left: auto; /* Centers the container horizontally */
-    margin-right: auto; /* Centers the container horizontally */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-page h1 {
@@ -457,22 +395,22 @@ section .wave.wave4 {
     color: black;
     white-space: nowrap;
     position: absolute;
-    right: 0; /* Keeps it at the right edge */
-    bottom: 0; /* Aligns the text to the bottom */
+    right: 0;
+    bottom: 0;
     z-index: 1;
-    font-size: clamp(40px, 5vw, 70px); /* Adjusts between 40px and 70px based on viewport width */
+    font-size: clamp(40px, 5vw, 70px);
     font-weight: 700;
-    margin: 0; /* Removes any default margin if necessary */
+    margin: 0;
 }
 
 .columns-container {
     display: flex;
-    flex-direction: row; /* Keeps children aligned horizontally */
-    justify-content: center; /* Centers children horizontally in the container */
-    align-items: center; /* Centers children vertically */
-    flex-wrap: wrap; /* Allows children to wrap to the next line if there's not enough space */
-    width: 100%; /* Takes the full width of the parent container */
-    height: auto; /* Adjusts height based on the content */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
     position: relative;
     margin-top: auto;
     gap:20px;
@@ -480,55 +418,46 @@ section .wave.wave4 {
 }
 
 .columns-container .column {
-    width: 500px; /* Width as per your requirement */
-    height: 116px; /* Height as set previously */
-    position: relative; /* Add this line to ensure boxed-words positions correctly */
-    /* Other styling as needed */
+    width: 500px;
+    height: 116px;
+    position: relative;
 }
 
 .columns-container .column p:nth-child(1) {
     position: absolute;
-    top: 0px; /* Keeps the first paragraph at the very top */
+    top: 0px;
     left: 0;
     margin: 0;
 }
 
 .columns-container .column p:nth-child(2) {
     position: absolute;
-    top: 30px; /* Adjust this value based on your font size and desired spacing */
+    top: 30px;
     left: 0;
     margin: 0;
 }
 
 .columns-container .column p {
     font-family: forma-djr-text, sans-serif;
-    /* Add other font-related properties here */
-    font-size: 20px; /* Example size */
+    font-size: 20px;
     font-weight: 400;
     font-style: normal;
 }
 
 .boxed-words {
     position: absolute;
-    /* Ensures it doesn't overflow the card */
     display: flex;
     flex-wrap: wrap;
-    /* Allows items to wrap */
     gap: 10px;
-    /* Fixed spacing between items */
     font-size: 20px;
 }
 
 .boxed-words span {
     padding: 3px 5px;
-    /* Adjust padding */
     border: 1px solid black;
-    /* Border for square box */
     box-sizing: border-box;
-    /* Include padding and border in the element's total width and height */
     font-family: forma-djr-text, sans-serif;
-    /* Add other font-related properties here */
-    font-size: 20px; /* Example size */
+    font-size: 20px;
     font-weight: 400;
     font-style: normal;
     white-space: nowrap;
@@ -536,34 +465,25 @@ section .wave.wave4 {
 
 .hover-trigger {
     text-decoration: underline;
-    /* Add an underline */
     color: rgb(0, 0, 100);
-    /* Change the text color to blue */
     cursor: pointer;
-    /* Change the cursor to indicate clickable */
 }
 
 .hover-trigger+.hover-image {
     display: none;
-    /* Hide the image by default */
     position: absolute;
-    /* Position the image absolutely to float over content */
     z-index: 10;
-    /* Ensure it's above other content */
     margin-left: 400px;
 }
 
 .hover-trigger:hover+.hover-image {
     display: block;
-    /* Show the image when hover-trigger is hovered */
 }
 
 .hover-image img {
     max-height: 200px;
-    /* Adjust based on your preference */
     max-width: 200px;
     border: 1px solid black;
-    /* Optional: adds a light border around the image */
     background-color: white;
     margin-left: 20px;
     
@@ -571,13 +491,9 @@ section .wave.wave4 {
 
 .content-section {
     display: flex;
-    /* Use flexbox for layout */
     justify-content: center;
-    /* Center items horizontally if there's extra space */
     align-items: flex-start;
-    /* Align items at the start of the cross axis */
     gap: 20px;
-    /* Space between the text and image containers */
 }
 
 .images-container2 {
@@ -589,48 +505,43 @@ section .wave.wave4 {
     max-width: 600px;
     flex: 1;
     padding:0;
-    /* Allows the container to expand to fit available space */
 }
 
 .images-container2 img {
     width: 100%;
-    /* Stretch the images to fill the container */
     height: auto;
-    /* Maintain aspect ratio */
     max-width: 600px;
-    /* Ensure images do not stretch beyond 600px */
 }
 .text-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Aligns children (the text) to the start of the container, i.e., the top */
+    justify-content: flex-start;
     flex: 1;
     min-width: 400px;
     max-width: 400px;
-    padding-top: 0; /* Ensures no padding is pushing the content down */
-    margin-top: 0; /* Ensures no margin is pushing the content down */
+    padding-top: 0;
+    margin-top: 0;
 }
 
 p {
     font-family: forma-djr-text, sans-serif;
-    /* Add other font-related properties here */
-    font-size: 16px; /* Example size */
+    font-size: 16px;
     font-weight: 400;
     font-style: normal;
 }
 
 .text-container strong {
-    font-size: 20px; /* Adjust the font size as needed */
+    font-size: 20px;
 }
 
 .text-container p {
-    margin-top: 0; /* Removes the top margin from the first paragraph */
+    margin-top: 0;
 }
 
 .image-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Changed to flex-start for consistent alignment */
+    justify-content: flex-start;
     align-items: flex-start;
     max-width: 1020px;
     margin: 0 auto;
@@ -638,33 +549,32 @@ p {
 }
 
 .image-section img {
-    width: 230px; /* Default width */
-    height: 300px; /* Default height */
-    margin: 10px; /* Adjusted margin for spacing */
+    width: 230px;
+    height: 300px;
+    margin: 10px;
     transition: transform 0.3s ease;
     object-fit: cover;
 }
 
 .image-section .square {
-    width: 230px; /* Double the width minus some for margin */
-    height: 230px; /* Keep the height consistent */
+    width: 230px;
+    height: 230px;
 }
 
 /* Class for landscape images */
 .image-section .landscape {
-    width: 480px; /* Double the width minus some for margin */
-    height: 300px; /* Keep the height consistent */
+    width: 480px;
+    height: 300px;
 }
 
 .placeholder {
-    width: 230px; /* Default width */
-    height: 230px; /* Default height */
-    background-color: transparent; /* Or any color that fits your design */
-    border: none; /* Adjust as needed */
+    width: 230px;
+    height: 230px;
+    background-color: transparent;
+    border: none;
 }
 
 .image-section img:hover {
-    /* Hover effect to slightly enlarge the image */
     transform: scale(2);
     z-index:10;
 }
@@ -674,26 +584,25 @@ p {
 /*--------------------------------------------------------------------------------*/
 .contact-section {
     margin-top: 10%;
-    text-align: center; /* Centers the content */
+    text-align: center;
     display: flex;
-    justify-content: center; /* Centers items horizontally for flexbox */
-    align-items: center; /* Centers items vertically for flexbox */
-    flex-direction: row; /* Arranges items in a row */
-    padding: 20px; /* Adds some padding around */
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
 }
 
 .email-link, .linkedin-icon {
-    margin: 0 10px; /* Adds horizontal spacing between icons */
-}
+    margin: 0 10px;
 
 .linkedin-icon img {
-    width: 30px; /* Adjust width as necessary */
-    height: 30px; /* Adjust height as necessary */
-    vertical-align: middle; /* Aligns the icons vertically centered */
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
 }
 
 .email-link img {
-    width: auto; /* Adjust width as necessary */
-    height: 30px; /* Adjust height as necessary */
-    vertical-align: middle; /* Aligns the icons vertically centered */
+    width: auto;
+    height: 30px;
+    vertical-align: middle;
 }
