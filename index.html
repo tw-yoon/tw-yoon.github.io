@@ -68,14 +68,12 @@
         
 
         <div class="description-box" id="descriptionBox">
-            <!-- Content will be dynamically inserted -->
         </div>
 
         <div class="section-title-container">
             <h2 class="section-title">About Me</h2>
         </div>
 
-        <!-- Start Bio Section -->
         <section class="bio-page">
             <div class="bio-image">
                 <img src="1x/me.JPG" alt="Your Name">
@@ -102,7 +100,6 @@
                 </div>
             </div>
         </section>
-        <!-- End Bio Section -->
 
     </main>
 
@@ -132,7 +129,6 @@
             });
         }
 
-        // Ensure buttons work as expected by adding event listeners after the DOM is fully loaded
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.changeContentBtn').forEach(button => {
                 button.addEventListener('click', function () {
@@ -159,16 +155,11 @@
         });
 
         document.querySelector('.section-title-container .section-title').addEventListener('mouseenter', function (e) {
-            if (e.target.textContent.includes('Projects')) { // Check if the hovered section title is "Projects"
-                // Get the bounding rectangle of the target element
+            if (e.target.textContent.includes('Projects')) {
                 const rect = e.target.getBoundingClientRect();
-                // Calculate the vertical middle position of the title
                 const titleMiddleY = rect.top + (rect.height / 10);
-                // Calculate the vertical middle of the window
                 const windowMiddleY = window.innerHeight / 10;
-                // Calculate how much to scroll to center the title
                 const scrollToY = window.pageYOffset + titleMiddleY - windowMiddleY;
-                // Scroll smoothly to the calculated position
                 window.scrollTo({
                     top: scrollToY,
                     behavior: 'smooth'
@@ -184,11 +175,11 @@
                     const descriptionText = this.getAttribute('data-description');
                     const descriptionBox = document.getElementById('descriptionBox');
                     descriptionBox.innerHTML = descriptionText;
-                    descriptionBox.style.display = 'block'; // Show the box
+                    descriptionBox.style.display = 'block';
                 });
 
                 image.addEventListener('mouseleave', function () {
-                    document.getElementById('descriptionBox').style.display = 'none'; // Hide the box
+                    document.getElementById('descriptionBox').style.display = 'none';
                 });
             });
         });
