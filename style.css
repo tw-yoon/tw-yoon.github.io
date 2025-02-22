@@ -740,23 +740,15 @@ footer {
 
 .draggable {
     position: absolute;
-    transform: translateX(-50%);
     user-select: none;
 }
 
 .goguryeo {
-    left: 20%;
-    bottom: 65%;
-}
-
-.baekje {
-    left: 50%;
-    bottom: 65%;
+    right: 60%;
 }
 
 .silla {
-    left: 80%;
-    bottom: 65%;
+    left: 60%;
 }
 
 #reset-btn {
