@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steering system</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/bpd3fkb.css">
+    <script defer src="script.js"></script>
+</head>
+
+
+<header>
+    <div class="home">
+        <svg onclick="window.location.href='index.html'" height="61.538px" , viewbox="0 0 406.021 61.538">
+            <g class="name" fill="black" stroke="none">
+                <path
+                    d="M4.964,39.633v-20.221H0v-7.5h4.964V0h11.607v11.912h6.789v7.5h-6.789v17.647c0,2.941,1.606,3.677,4.161,3.677,1.022,0,2.19-.074,2.628-.074v8.75c-1.021.295-3.285.588-6.497.588-6.935,0-11.899-2.279-11.899-10.367Z" />
+                <path
+                    d="M26.645,38.656c0-8.217,6.57-10.69,14.308-11.708,7.008-.873,9.49-1.599,9.49-4.145,0-2.4-1.533-3.999-5.11-3.999-3.796,0-5.693,1.672-6.059,4.8h-10.95c.292-6.909,5.621-12.799,16.936-12.799,5.621,0,9.417,1.018,12.118,3.054,3.212,2.327,4.745,5.962,4.745,10.616v18.762c0,2.982.292,5.6,1.313,6.254v.509h-11.533c-.584-.8-.949-3.2-1.241-5.091h-.146c-2.19,3.128-5.475,5.091-11.096,5.091-7.446,0-12.775-4-12.775-11.344ZM50.734,35.747v-4.436c-1.533.8-3.723,1.381-6.132,1.963-4.599,1.019-6.497,2.182-6.497,5.018,0,2.982,2.19,4.145,5.11,4.145,4.453,0,7.519-2.691,7.519-6.69Z" />
+                <path
+                    d="M66.209,30.293c0-11.085,7.811-19.562,19.199-19.562,5.329,0,9.562,1.739,12.774,4.637,4.453,4.057,6.643,10.506,6.57,18.041h-26.863c.73,4.998,3.504,8.115,8.395,8.115,3.139,0,5.183-1.377,6.205-3.696h11.607c-.803,3.333-2.993,6.521-6.278,8.767-3.139,2.173-6.935,3.405-11.68,3.405-12.336,0-19.928-8.476-19.928-19.707ZM92.708,26.381c-.438-4.42-3.212-7.245-7.081-7.245-4.526,0-6.862,2.825-7.665,7.245h14.746Z" />
+                <path
+                    d="M104.681,11.826h12.118l4.088,15.806c.803,3.057,1.679,7.381,1.679,7.381h.146s.876-4.399,1.68-7.604l3.941-15.583h10.074l4.088,15.583c.803,3.281,1.752,7.679,1.752,7.679h.146s.949-4.399,1.752-7.456l4.161-15.806h11.752l-11.46,38.174h-11.169l-4.38-17.298c-.803-2.982-1.606-6.859-1.606-6.859h-.146s-.876,3.877-1.679,6.859l-4.453,17.298h-11.022l-11.461-38.174Z" />
+                <path
+                    d="M161.693,30.402c0-11.137,8.029-19.598,20.002-19.598,12.044,0,19.928,8.46,19.928,19.598s-7.884,19.598-19.928,19.598c-11.973,0-20.002-8.461-20.002-19.598ZM189.578,30.402c0-6.726-2.773-11.281-7.956-11.281s-7.884,4.556-7.884,11.281,2.701,11.209,7.884,11.209,7.956-4.484,7.956-11.209Z" />
+                <path
+                    d="M205.639,11.849h11.461v5.215h.219c2.774-4.098,6.352-6.333,11.534-6.333,8.176,0,12.993,5.961,12.993,14.455v24.813h-11.898v-22.354c0-4.024-1.971-6.781-5.84-6.781-3.941,0-6.57,3.352-6.57,8.047v21.087h-11.898V11.849Z" />
+                <path
+                    d="M245.131,52.34h3.942c3.285,0,5.475-1.533,5.475-5.328,0-1.461-.364-3.65-.948-6.424l-5.694-28.762h12.19l2.044,15.768c.438,3.65.876,9.052.876,9.052h.146s1.897-5.11,3.649-8.833l7.373-15.986h11.753l-19.71,39.273c-3.649,7.227-7.737,10.438-15.037,10.438h-7.884l1.824-9.198Z" />
+                <path
+                    d="M283.603,30.402c0-11.137,8.03-19.598,20.001-19.598,12.045,0,19.929,8.46,19.929,19.598s-7.884,19.598-19.929,19.598c-11.971,0-20.001-8.461-20.001-19.598ZM311.488,30.402c0-6.726-2.774-11.281-7.957-11.281s-7.884,4.556-7.884,11.281,2.7,11.209,7.884,11.209,7.957-4.484,7.957-11.209Z" />
+                <path
+                    d="M325.869,30.402c0-11.137,8.029-19.598,20.002-19.598,12.044,0,19.928,8.46,19.928,19.598s-7.884,19.598-19.928,19.598c-11.973,0-20.002-8.461-20.002-19.598ZM353.754,30.402c0-6.726-2.773-11.281-7.956-11.281s-7.884,4.556-7.884,11.281,2.701,11.209,7.884,11.209,7.956-4.484,7.956-11.209Z" />
+                <path
+                    d="M369.814,11.849h11.461v5.215h.219c2.774-4.098,6.352-6.333,11.534-6.333,8.176,0,12.993,5.961,12.993,14.455v24.813h-11.898v-22.354c0-4.024-1.971-6.781-5.84-6.781-3.941,0-6.57,3.352-6.57,8.047v21.087h-11.898V11.849Z" />
+            </g>
+        </svg>
+
+        <div class="dropdown-menu">
+            <div class="submenu-container">
+                <a id="class-projects">Class projects</a>
+                <div class="submenu">
+                    <a href="cart-with-basket.html">Cart with basket</a>
+                    <a href="the-120.html">The 120 ★</a>
+                    <a href="resistor-cutter.html">Resistor cutter</a>
+                    <a href="puppet-theater.html">Puppet theater ★</a>
+                    <a href="automated-swing.html">Automated swing</a>
+                </div>
+            </div>
+            <div class="submenu-container">
+                <a id="formula-sae">Formula SAE</a>
+                <div class="submenu">
+                    <a href="steering-system.html">Steering system</a>
+                    <a href="rear-hubs.html">Rear hubs</a>
+                    <a href="bodywork.html">Bodywork</a>
+                </div>
+            </div>
+            <div class="submenu-container">
+                <a id="personal-projects">Personal projects</a>
+                <div class="submenu">
+                    <a href="kasa-logo-redesign.html">KASA logo redesign</a>
+                    <a href="s-statue.html">"S" statue</a>
+                    <a href="cat-hanger.html">Cat paw hanger</a>
+                    <a href="diffuser.html">Diffuser</a>
+                </div>
+            </div>
+            <a onclick="scrollToTop()">Back to top</a>
+        </div>
+    </div>
+
+    <div class="contact-buttons">
+        <button class="email-button" onclick="location.href='mailto:taewonyoon2026@u.northwestern.edu'">Email
+            Me</button>
+        <button class="linkedin-button"
+            onclick="window.open('https://www.linkedin.com/in/taewony', '_blank')">Linked-in</button>
+    </div>
+
+</header>
+
+<body class="orange-highlight">
+    <div class="front-page orange">
+        <img src="images/steering-system/steering-system-orange.png">
+    </div>
+    <div class="title-page orange">
+        <p>Steering system</p>
+    </div>
+    <div class="content">
+        <div class="chapter">
+            <p>
+                Project summary
+            </p>
+        </div>
+        <div class="content-page-2">
+            <div class="image-section">
+                <img src="images/steering-system/steering-blue-square.png">
+            </div>
+            <div class="text-box-3">
+                <p>
+                    <strong>Sep. 2022 - Jun. 2023</strong>
+                    <br><br>
+
+                    I was in charge of the steering system along with two other senior members. Manufacturing the
+                    steering
+                    columns and pillow blocks were my first individual projects for the team(shown in blue).
+                    <br><br>
+                    The goal of this project was to ensure that the steering columns and pillow blocks were designed and
+                    fabricated to exact standards so that the parts fit perfectly into the vehicle's cockpit. Through
+                    this project, I aimed to establish a foundation for engineering with precision and collaborative
+                    problem-solving.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="chapter">
+            <p>CAD</p>
+        </div>
+        <div class="content-page-2">
+            <div class="image-section">
+                <img src="images/steering-system/steering-assem.png">
+                <img src="images/steering-system/pillow-block.png">
+                <img src="images/steering-system/steering-in-frame.jpg" class="landscape">
+            </div>
+        </div>
+
+        <div class="chapter">
+            <p>
+                Manufacturing
+            </p>
+        </div>
+        <div class="content-page">
+            <div class="text-box-3">
+                <p> I used the manual lathe and mill to manufacture the pillow blocks.
+                </p>
+            </div>
+            <div class="image-section-3">
+                <img src="images/steering-system/1.jpg">
+                <img src="images/steering-system/2.jpg">
+                <img src="images/steering-system/3.jpg">
+
+            </div>
+        </div>
+
+        <div class="extra-space">
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div id="clock"></div>
+    <div id="visit-count"></div>
+</footer>
+
+</html>
