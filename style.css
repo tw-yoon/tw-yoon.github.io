@@ -196,9 +196,10 @@ header {
 .warning {
     position: absolute;
     right: calc(50% - min(540px, 50vw) + 8px);
-    bottom: calc(100vh - min(724px, 100%));
+    bottom: calc(100vh - min(825px, 100%));
     opacity: 1;
     text-align: right;
+    padding-bottom: 53px;
 }
 
 .main {
@@ -212,7 +213,6 @@ header {
     max-width: 1080px;
     height: 100vh;
     max-height: 720px;
-    aspect-ratio: 3/2;
     margin: 0 auto;
 }
 
