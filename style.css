@@ -181,6 +181,10 @@ header {
     padding-right: 4px;
 }
 
+.extra-space {
+    height: 48px;
+}
+
 .hint {
     position: fixed;
     top: 50%;
@@ -214,16 +218,6 @@ header {
     height: 100vh;
     max-height: 720px;
     margin: 0 auto;
-}
-
-.extra-space {
-    height: 48px;
-}
-
-.big-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .case-3 {
@@ -271,46 +265,36 @@ header {
 }
 
 #r1 {
-    animation: animation var(--animation-duration) linear infinite,
-        scaling var(--animation-duration) ease-in-out infinite;
+    animation: animation var(--animation-duration) linear infinite;
 }
 
 #r2 {
-    animation: animation var(--animation-duration) linear infinite,
-        scaling var(--animation-duration) ease-in-out infinite;
+    animation: animation var(--animation-duration) linear infinite;
     animation-delay: -3s;
 }
 
 #r3 {
-    animation: animation var(--animation-duration) linear infinite,
-        scaling var(--animation-duration) ease-in-out infinite;
+    animation: animation var(--animation-duration) linear infinite;
     animation-delay: -6s;
 }
 
 #r4 {
-    animation: animation var(--animation-duration) linear infinite,
-        scaling var(--animation-duration) ease-in-out infinite;
+    animation: animation var(--animation-duration) linear infinite;
     animation-delay: -9s;
 }
 
 #r5 {
-    animation: animation var(--animation-duration) linear infinite,
-        scaling var(--animation-duration) ease-in-out infinite;
+    animation: animation var(--animation-duration) linear infinite;
     animation-delay: -12s;
 }
 
 #r6 {
-    animation: animation var(--animation-duration) linear infinite,
-        scaling var(--animation-duration) ease-in-out infinite;
+    animation: animation var(--animation-duration) linear infinite;
     animation-delay: -15s;
 }
 
 .hover {
     width: 160px;
-}
-
-.svg:hover {
-    opacity: 0;
 }
 
 .paused #r1,
@@ -321,9 +305,6 @@ header {
 .paused #r6 {
     animation-play-state: paused;
 }
-
-
-
 
 
 
