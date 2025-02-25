@@ -297,13 +297,37 @@ header {
     width: 160px;
 }
 
+.case-3:hover svg {
+    opacity: 1;
+}
+
+#hover {
+    position: relative;
+    z-index: 2;
+}
+
+.case-3 img {
+    position: absolute; 
+bottom: -2px;
+    left: 0;
+}
+
+.case-3 svg {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
 .paused #r1,
 .paused #r2,
 .paused #r3,
 .paused #r4,
 .paused #r5,
 .paused #r6 {
-    animation-play-state: paused;
+    animation-play-state: paused !important; /* Ensure that it's correctly applied */
 }
 
 

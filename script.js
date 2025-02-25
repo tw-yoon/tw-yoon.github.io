@@ -34,15 +34,17 @@ document.querySelector('.menu').addEventListener('click', function (e) {
     scrollToBottom = !scrollToBottom;
 });
 
-const targetSvgs = document.querySelectorAll('svg[data-target="true"]');
 const rotationContainer = document.querySelector('.rotation-container');
+const caseElements = document.querySelectorAll('.case-3');
 
-targetSvgs.forEach(svg => {
-    svg.addEventListener('mouseenter', () => {
+caseElements.forEach(caseElement => {
+    const targetImage = caseElement.querySelector('img[data-target="true"]');
+    
+    caseElement.addEventListener('mouseenter', () => {
         rotationContainer.classList.add('paused');
     });
 
-    svg.addEventListener('mouseleave', () => {
+    caseElement.addEventListener('mouseleave', () => {
         rotationContainer.classList.remove('paused');
     });
 });
