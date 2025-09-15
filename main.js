@@ -148,6 +148,31 @@ updateTime();
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const openAllBtn = document.getElementById("open-all");
+  const closeAllBtn = document.getElementById("close-all");
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  openAllBtn.addEventListener("click", () => {
+    dropdowns.forEach(d => {
+      d.classList.add("expanded");
+      d.classList.remove("collapsed");
+    });
+  });
+
+  closeAllBtn.addEventListener("click", () => {
+    dropdowns.forEach(d => {
+      d.classList.add("collapsed");
+      d.classList.remove("expanded");
+    });
+  });
+});
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const zoomables = document.querySelectorAll('.grid img, .grid-landscape img');
   const lb = document.getElementById('lightbox');

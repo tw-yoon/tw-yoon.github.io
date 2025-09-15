@@ -14,7 +14,9 @@ html {
   font-family: neue-haas-grotesk-display, sans-serif;
 }
 
-body { padding-top: 48px; }
+body {
+  padding-top: 48px;
+}
 
 html::-webkit-scrollbar {
   display: none;
@@ -37,8 +39,6 @@ header {
   z-index: 2000;
   position: fixed;
   background-color: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  backdrop-filter: saturate(180%) blur(6px);
 }
 
 a.header-name,
@@ -61,7 +61,7 @@ a.header-name:hover {
 }
 
 a.header-name:hover::after {
-  content: "Back to home";
+  content: "Back";
   position: absolute;
   inset: 0;
   /* top/right/bottom/left: 0 */
@@ -73,6 +73,13 @@ a.header-name:hover::after {
   /* keep hover stable on the link */
 }
 
+.header-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 4px 0 4px;
+  gap: 16px;
+}
 
 .header-menu {
   display: flex;
@@ -435,10 +442,11 @@ video {
 .lightbox {
   position: fixed;
   inset: 0;
-  display: none;                 /* hidden by default */
+  display: none;
+  /* hidden by default */
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0, 0, 0, 0.75);
   z-index: 3000;
 }
 
@@ -447,7 +455,8 @@ video {
 }
 
 .lightbox-content {
-  position: relative;   /* positioning context for the close button */
+  position: relative;
+  /* positioning context for the close button */
   display: inline-block;
 }
 
@@ -458,7 +467,7 @@ video {
   max-height: none;
   background: white;
   border: 1px solid lightgrey;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .lightbox video {
@@ -468,8 +477,9 @@ video {
   max-height: none;
   background: black;
   border: 1px solid lightgrey;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  display: none; /* hidden by default; JS will toggle */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  display: none;
+  /* hidden by default; JS will toggle */
 }
 
 .lightbox-close {
@@ -488,7 +498,7 @@ video {
 }
 
 .lightbox-close:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 /* Give images a hint they’re zoomable */
@@ -502,7 +512,10 @@ video {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;            /* fill the square, crop excess */
-  object-position: 50% 50%;     /* center by default */
-  background: black;            /* letterbox color if you switch to contain */
+  object-fit: cover;
+  /* fill the square, crop excess */
+  object-position: 50% 50%;
+  /* center by default */
+  background: black;
+  /* letterbox color if you switch to contain */
 }
