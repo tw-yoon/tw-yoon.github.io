@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taewon Yoon</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+
+<body>
+  <header>
+    <a class="header-name-index">Taewon Yoon</a>
+    <div class="header-menu">
+      <a class="menu" href="mailto:taewonyoon2026@u.northwestern.edu">Email</a>
+      <a class="menu" href="https://www.linkedin.com/in/taewony" target="_blank">Linkedin</a>
+    </div>
+  </header>
+  <script type="importmap"> {
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/"}}
+  </script>
+
+  <script type="module" src="main.js"></script>
+
+  <div class="instructions">
+    Click and drag to rotate, scroll to zoom in/out. Double click for more information.
+  </div>
+
+  <div class="grid-container" style="padding: 0 48px 0 48px;">
+    <div class="grid" data-link="chair.html">
+      <div class="gltf-viewer" data-model="/glb/chair.glb" data-scale="40" data-camx="-50" data-camy="40" data-camz="50"
+        data-rotx="0" data-roty="0" data-rotz="0">
+      </div>
+      <span class="elongated-text">The 120</span>
+    </div>
+
+    <div class="grid" data-link="puppet.html">
+      <div class="gltf-viewer" data-model="/glb/puppet.glb" data-scale="25" data-camx="0" data-camy="25" data-camz="50"
+        data-rotx="0" data-roty="-10" data-rotz="0">
+      </div>
+      <span class="elongated-text">Puppet Theater</span>
+    </div>
+
+    <div class="grid" data-link="statue.html">
+      <div class="gltf-viewer" data-model="/glb/statue.glb" data-scale="15" data-camx="30" data-camy="25" data-camz="45"
+        data-rotx="0" data-roty="10" data-rotz="0" data-shiny="true"></div>
+      <span class="elongated-text">"S" Statue</span>
+    </div>
+
+    <div class="grid" data-link="hub.html">
+      <div class="gltf-viewer" data-model="/glb/hub.glb" data-scale="40" data-camx="-50" data-camy="40" data-camz="50"
+        data-rotx="0" data-roty="0" data-rotz="0">
+      </div>
+      <span class="elongated-text">Rear Hubs</span>
+    </div>
+
+    <div class="grid" data-link="bodywork.html">
+      <div class="gltf-viewer" data-model="/glb/bodywork.glb" data-scale="20" data-camx="50" data-camy="40"
+        data-camz="50" data-rotx="0" data-roty="-10" data-rotz="0">
+      </div>
+      <span class="elongated-text">Bodywork</span>
+    </div>
+
+  </div>
+
+    <div class="instructions">
+    Click and drag to rotate, scroll to zoom in/out. Double click for more information.
+  </div>
+  <!-- <div class="subtitle"><a class="name2">Non-Featured Projects</a></div>
+  <div class="dropdown collapsed">
+    <div class="full-list">
+      <a href="cart-with-basket.html" class="project">Cart With Basket</a>
+      <a href="steering-system.html" class="project">Steering System</a>
+      <a href="sketches.html" class="project">Sketches</a>
+      <a href="kasa-logo-redesign.html" class="project">KASA Logo</a>
+      <a href="kasa-character.html" class="project">KASA Characters</a>
+    </div>
+  </div> -->
+
+  <div class="grid-container" style="padding-top: 0px">
+    <div class="grid">
+      <div class="gltf-viewer" data-model="/glb/man.glb" data-scale="20" data-camx="-50" data-camy="40" data-camz="50"
+        data-rotx="0" data-roty="0" data-rotz="0">
+      </div>
+      <span class="elongated-text">Taewon Yoon</span>
+      <span class="elongated-text bottom">will be updated soon</span>
+    </div>
+    <div class="grid-landscape-about-me">
+      <a class="about-text" href="https://en.wikipedia.org/wiki/Northwestern_University" target="_blank">Northwestern
+        University</a>
+      <a class="about-text" href="https://design.northwestern.edu/programs/bs-manufacturing-design-engineering/"
+        target="_blank">Manufacturing&Design
+        Eng</a>
+      <!--<span class="about-text line-skipper">&nbsp;</span>
+        <span class="about-text">I go for:</span>
+        <span class="about-text line-skipper">&nbsp;</span>
+        <span class="about-text">Aesthetic Design</span>
+        <span class="about-text">Efficient Design</span>
+        <span class="about-text">Intentional Design</span>
+        <span class="about-text">Open Design</span>
+        <span class="about-text">Universal Design</span> -->
+    </div>
+  </div>
+
+
+
+  <script>
+    document.querySelectorAll('.grid').forEach(grid => {
+      grid.addEventListener('mouseenter', () => {
+        document.body.classList.add('hovering-grid');
+      });
+      grid.addEventListener('mouseleave', () => {
+        document.body.classList.remove('hovering-grid');
+      });
+    });
+  </script>
+
+  <script>
+    document.querySelectorAll('.name2').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const section = toggle.closest('.subtitle').nextElementSibling;
+        section.classList.toggle('collapsed');
+        section.classList.toggle('expanded');
+      });
+    });
+  </script>
+
+  <script>
+    document.querySelectorAll('.grid').forEach((grid) => {
+      const link = grid.dataset.link;
+      if (link) {
+        grid.addEventListener('dblclick', () => {
+          window.location.href = link;
+        });
+      }
+    });
+  </script>
+
+
+<div class="footer">
+    <div id="clock"></div>
+</div>
+</body>
+
+</html>

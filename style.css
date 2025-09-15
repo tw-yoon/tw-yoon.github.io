@@ -1,0 +1,508 @@
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  color: lightgrey;
+  background-color: transparent;
+  font-family: neue-haas-grotesk-display, sans-serif;
+}
+
+body { padding-top: 48px; }
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background-color: lightgrey;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid lightgrey;
+  height: 48px;
+  user-select: none;
+  z-index: 2000;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  backdrop-filter: saturate(180%) blur(6px);
+}
+
+a.header-name,
+a.header-name-index {
+  display: inline-block;
+  font-size: 3rem;
+  transform: scaleY(1.2);
+  text-decoration: none;
+  color: lightgrey;
+}
+
+a.header-name:hover,
+a.name2:hover {
+  font-family: serif;
+}
+
+a.header-name:hover {
+  color: transparent;
+  /* hides the original text */
+}
+
+a.header-name:hover::after {
+  content: "Back to home";
+  position: absolute;
+  inset: 0;
+  /* top/right/bottom/left: 0 */
+  display: flex;
+  /* center nicely */
+  white-space: nowrap;
+  color: lightgrey;
+  pointer-events: none;
+  /* keep hover stable on the link */
+}
+
+
+.header-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 4px 0 4px;
+}
+
+.menu {
+  display: inline-flex;
+  text-align: center;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+a.menu {
+  text-decoration: none;
+  color: lightgray;
+  transform: scaleY(1.2);
+}
+
+a.menu:hover {
+  font-family: neue-haas-grotesk-display;
+  background-color: lightgrey;
+  color: white;
+}
+
+.instructions {
+  text-align: center;
+  font-size: 1rem;
+  transform: scaleY(1.2);
+  color: lightgrey;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 48px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.footer {
+  text-align: center;
+  font-size: 1rem;
+  transform: scaleY(1.2);
+  color: lightgrey;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 48px;
+  /* optional: helps pack items nicely when spans vary */
+  grid-auto-flow: dense;
+}
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 1080px;
+  margin: 0 auto;
+  gap: 4px;
+  grid-auto-flow: dense;
+}
+
+.elongated-text {
+  display: inline-block;
+  font-size: 2rem;
+  transform: translateX(-50%) scaleY(1.2);
+  position: absolute;
+  left: 50%;
+  white-space: nowrap;
+}
+
+.elongated-text.bottom {
+  top: auto;
+  bottom: 8px;
+}
+
+.about-text {
+  color: lightgrey;
+  display: block;
+  text-align: left;
+  font-size: 1.5rem;
+  transform: scaleY(1.2);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.grid {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  border: 1px solid lightgray;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  user-select: none;
+}
+
+.grid-landscape {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  border: 1px solid lightgray;
+  grid-column: span 2;
+  aspect-ratio: 2 / 1;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  user-select: none;
+}
+
+.grid-landscape-about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  border: 1px solid transparent;
+  grid-column: span 2;
+  aspect-ratio: 2 / 1;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  user-select: none;
+}
+
+.about-text:hover {
+  font-family: neue-haas-grotesk-display;
+  background-color: lightgrey;
+  color: white;
+}
+
+.grid:hover .elongated-text {
+  font-family: neue-haas-grotesk-display;
+}
+
+.gltf-viewer {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
+
+.grid:hover {
+  background-color: lightgrey;
+  color: white;
+}
+
+.grid[data-link] {
+  cursor: pointer;
+}
+
+.grid-image {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  background-color: white;
+}
+
+.content-group {
+  padding: 48px 0;
+}
+
+.subtitle {
+  display: flex;
+  top: 0;
+  border-bottom: 1px solid lightgrey;
+  height: 48px;
+  user-select: none;
+  padding-left: 48px;
+
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+a.name2 {
+  display: inline-block;
+  font-size: 3rem;
+  transform: scaleY(1.2);
+  cursor: pointer;
+}
+
+.full-list {
+  width: 100vw;
+  max-width: 1080px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: space-around;
+  user-select: none;
+  padding: 48px 0 48px 48px;
+}
+
+a.project {
+  text-decoration: none;
+  display: flex;
+  height: 24px;
+  align-items: center;
+  width: fit-content;
+  padding: 0 4px 0 4px;
+  transform: scaleY(1.2);
+  color: lightgrey;
+}
+
+a.project:hover {
+  font-family: neue-haas-grotesk-display;
+  background-color: lightgrey;
+  color: white;
+}
+
+/* Dropdown functionality for .grid-container-2 inside .dropdown-section */
+.dropdown .grid-container {
+  overflow: hidden;
+}
+
+.dropdown.collapsed .grid-container {
+  max-height: 0;
+  opacity: 0;
+}
+
+.dropdown.expanded .grid-container {
+  opacity: 1;
+}
+
+.dropdown .grid-container-2 {
+  overflow: hidden;
+}
+
+.dropdown.collapsed .grid-container-2 {
+  max-height: 0;
+  opacity: 0;
+}
+
+.dropdown.expanded .grid-container-2 {
+  opacity: 1;
+  padding: 48px 48px 48px 48px;
+}
+
+.dropdown .full-list {
+  overflow: hidden;
+}
+
+.dropdown.collapsed .full-list {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+}
+
+.dropdown.expanded .full-list {
+  opacity: 1;
+  padding: 48px 0 48px 48px;
+}
+
+.dropdown.expanded.no-bottom-padding .full-list {
+  padding-bottom: 0;
+}
+
+.dropdown.expanded.no-bottom-padding .grid-container-2 {
+  padding-bottom: 0;
+}
+
+video {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .grid-container,
+  .grid-container-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .elongated-text {
+    font-size: 1.5rem;
+  }
+
+  .about-text,
+  .tools-list {
+    font-size: 1rem;
+  }
+
+  .grid-text {
+    width: 100%;
+  }
+
+  .grid-landscape-about-me {
+    grid-column: span 1;
+    aspect-ratio: 2 / 1;
+  }
+
+}
+
+@media (max-width: 580px) {
+  a.name2 {
+    font-size: 2rem;
+    line-height: 2.05;
+  }
+}
+
+@media (max-width: 456px) {
+  .header-menu {
+    display: none;
+  }
+}
+
+/* Intro section styles */
+.intro-section {
+  display: flex;
+  align-items: center;
+  margin: 48px 0;
+  max-width: 1080px;
+  padding: 0 48px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: red;
+}
+
+.intro-square {
+  width: 50%;
+  aspect-ratio: 1/1;
+  background-color: #333;
+  margin-right: 48px;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-text p {
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Lightbox overlay */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;                 /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.75);
+  z-index: 3000;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox-content {
+  position: relative;   /* positioning context for the close button */
+  display: inline-block;
+}
+
+.lightbox img {
+  width: 720px;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  background: white;
+  border: 1px solid lightgrey;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.lightbox video {
+  width: 720px;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  background: black;
+  border: 1px solid lightgrey;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  display: none; /* hidden by default; JS will toggle */
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 0;
+  right: -52px;
+  width: 48px;
+  height: 48px;
+  font-size: 32px;
+  line-height: 1;
+  color: lightgrey;
+  background: transparent;
+  border: 1px solid lightgrey;
+  cursor: pointer;
+  user-select: none;
+}
+
+.lightbox-close:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Give images a hint they’re zoomable */
+.grid img,
+.grid-landscape img {
+  cursor: zoom-in;
+}
+
+.grid video,
+.grid-landscape video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;            /* fill the square, crop excess */
+  object-position: 50% 50%;     /* center by default */
+  background: black;            /* letterbox color if you switch to contain */
+}
