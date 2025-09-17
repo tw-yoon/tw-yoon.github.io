@@ -127,26 +127,23 @@ document.querySelectorAll(".gltf-viewer").forEach((container) => {
 
 // Time Function
 function updateTime() {
-  function updateTime() {
-    const clockElement = document.getElementById('clock');
-    const now = new Date();
+  const clockElement = document.getElementById('clock');
+  const now = new Date();
 
-    const year = now.getFullYear();
-    const month = (now.getMonth() + 1).toString().padStart(2, '0');
-    const day = now.getDate().toString().padStart(2, '0');
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const seconds = now.getSeconds().toString().padStart(2, '0');
-    /*const milliseconds = now.getMilliseconds().toString().padStart(3, '0');*/
+  const year = now.getFullYear();
+  const month = (now.getMonth() + 1).toString().padStart(2, '0');
+  const day = now.getDate().toString().padStart(2, '0');
+  const hours = now.getHours().toString().padStart(2, '0');
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  const seconds = now.getSeconds().toString().padStart(2, '0');
+  /*const milliseconds = now.getMilliseconds().toString().padStart(3, '0');*/
 
-    clockElement.textContent = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-    /*clockElement.textContent = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}:${milliseconds}`;*/
-  }
-  /*setInterval(updateTime, 10);*/
-  setInterval(updateTime, 1000);
-
-  updateTime();
+  clockElement.textContent = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+  /*clockElement.textContent = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}:${milliseconds}`;*/
 }
+/*setInterval(updateTime, 10);*/
+setInterval(updateTime, 1000);
+
 updateTime();
 
 
