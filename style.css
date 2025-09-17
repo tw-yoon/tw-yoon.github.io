@@ -412,24 +412,39 @@ video {
     grid-template-columns: 1fr;
   }
 
-   a.header-name,
-   a.header-name-index {
+  a.header-name,
+  a.header-name-index {
     font-size: 2rem;
     line-height: 2.05;
   }
 
-    a.name2 {
+  a.name2 {
     font-size: 1.5rem;
     line-height: 3;
   }
 
-    .header-controls {
+  .header-controls {
     gap: 8px;
   }
 
-    .grid-landscape {
-    grid-column: span 1;    /* stop spanning 2 columns */
-    aspect-ratio: 2 / 1;    /* square on mobile */
+  .grid-landscape {
+    grid-column: span 1;
+    /* stop spanning 2 columns */
+    aspect-ratio: 2 / 1;
+    /* square on mobile */
+  }
+
+  .grid video,
+  .grid-landscape video {
+    pointer-events: auto;
+    cursor: default;
+  }
+
+  /* Allow videos to be tappable/playable */
+  .grid video,
+  .grid-landscape video {
+    pointer-events: auto;
+    cursor: default;
   }
 }
 
