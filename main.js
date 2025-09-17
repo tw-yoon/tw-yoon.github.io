@@ -1,3 +1,4 @@
+// GLTF 3D Function
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
@@ -120,31 +121,39 @@ document.querySelectorAll(".gltf-viewer").forEach((container) => {
   });
 });
 
+
+
+
+
+// Time Function
 function updateTime() {
-    function updateTime() {
-        const clockElement = document.getElementById('clock');
-        const now = new Date();
+  function updateTime() {
+    const clockElement = document.getElementById('clock');
+    const now = new Date();
 
-        const year = now.getFullYear();
-        const month = (now.getMonth() + 1).toString().padStart(2, '0');
-        const day = now.getDate().toString().padStart(2, '0');
-        const hours = now.getHours().toString().padStart(2, '0');
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        const seconds = now.getSeconds().toString().padStart(2, '0');
-        /*const milliseconds = now.getMilliseconds().toString().padStart(3, '0');*/
+    const year = now.getFullYear();
+    const month = (now.getMonth() + 1).toString().padStart(2, '0');
+    const day = now.getDate().toString().padStart(2, '0');
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    /*const milliseconds = now.getMilliseconds().toString().padStart(3, '0');*/
 
-        clockElement.textContent = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-        /*clockElement.textContent = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}:${milliseconds}`;*/
-    }
-    /*setInterval(updateTime, 10);*/
-    setInterval(updateTime, 1000);
+    clockElement.textContent = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    /*clockElement.textContent = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}:${milliseconds}`;*/
+  }
+  /*setInterval(updateTime, 10);*/
+  setInterval(updateTime, 1000);
 
-    updateTime();
+  updateTime();
 }
-
 updateTime();
 
 
+
+
+
+// Open All Close All Function
 document.addEventListener("DOMContentLoaded", () => {
   const openAllBtn = document.getElementById("open-all");
   const closeAllBtn = document.getElementById("close-all");
@@ -166,6 +175,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
+
+// Lightview Function
 document.addEventListener('DOMContentLoaded', () => {
   const zoomables = document.querySelectorAll('.grid img, .grid-landscape img');
   const lb = document.getElementById('lightbox');
