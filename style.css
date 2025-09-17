@@ -409,7 +409,7 @@ video {
 
   .grid-container,
   .grid-container-2 {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
 
    a.header-name,
@@ -421,6 +421,15 @@ video {
     a.name2 {
     font-size: 1.5rem;
     line-height: 3;
+  }
+
+    .header-controls {
+    gap: 8px;
+  }
+
+    .grid-landscape {
+    grid-column: span 1;    /* stop spanning 2 columns */
+    aspect-ratio: 2 / 1;    /* square on mobile */
   }
 }
 
