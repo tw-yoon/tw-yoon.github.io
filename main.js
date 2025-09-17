@@ -145,9 +145,6 @@ function updateTime() {
 updateTime();
 
 
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const openAllBtn = document.getElementById("open-all");
   const closeAllBtn = document.getElementById("close-all");
@@ -167,10 +164,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
