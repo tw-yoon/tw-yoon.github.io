@@ -380,13 +380,8 @@ video {
     font-size: 1.5rem;
   }
 
-  .about-text,
-  .tools-list {
+  .about-text {
     font-size: 1rem;
-  }
-
-  .grid-text {
-    width: 100%;
   }
 
   .grid-landscape-about-me {
@@ -412,8 +407,20 @@ video {
     display: none;
   }
 
-  header {
-    background-color: red;
+  .grid-container,
+  .grid-container-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+   a.header-name,
+   a.header-name-index {
+    font-size: 2rem;
+    line-height: 2.05;
+  }
+
+    a.name2 {
+    font-size: 1.5rem;
+    line-height: 3;
   }
 }
 
@@ -531,6 +538,7 @@ video {
 
 
 @media (max-width: 768px) {
+
   /* Force lightbox hidden even if JS adds .open */
   .lightbox,
   .lightbox.open {
@@ -542,7 +550,9 @@ video {
   .grid-landscape img,
   .grid video,
   .grid-landscape video {
-    pointer-events: none;  /* clicks won't trigger JS handlers */
-    cursor: default;       /* remove zoom cursor */
+    pointer-events: none;
+    /* clicks won't trigger JS handlers */
+    cursor: default;
+    /* remove zoom cursor */
   }
 }
