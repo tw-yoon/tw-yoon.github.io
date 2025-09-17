@@ -411,6 +411,10 @@ video {
   .header-menu {
     display: none;
   }
+
+  header {
+    background-color: red;
+  }
 }
 
 /* Intro section styles */
