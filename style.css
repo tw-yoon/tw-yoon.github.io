@@ -10,7 +10,7 @@ html {
   height: 100%;
   width: 100%;
   color: #cbcbcb;
-  background-color: ivory;
+  background-color: white;
   font-family: neue-haas-grotesk-display, sans-serif;
 }
 
@@ -23,7 +23,7 @@ html::-webkit-scrollbar {
 }
 
 ::selection {
-  background-color: #cbcbcb;;
+  background-color: #cbcbcb;
   color: white;
 }
 
@@ -33,12 +33,12 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  border-bottom: 1px solid #cbcbcb;;
+  border-bottom: 1px solid #cbcbcb;
   height: 48px;
   user-select: none;
   z-index: 2000;
   position: fixed;
-  background-color: ivory;
+  background-color: white;
 }
 
 a.header-name,
@@ -47,7 +47,7 @@ a.header-name-index {
   font-size: 3rem;
   transform: scaleY(1.2);
   text-decoration: none;
-  color: #cbcbcb;;
+  color: #cbcbcb;
 }
 
 a.header-name:hover,
@@ -68,7 +68,7 @@ a.header-name:hover::after {
   display: flex;
   /* center nicely */
   white-space: nowrap;
-  color: lightgrey;
+  color: #cbcbcb;
   pointer-events: none;
   /* keep hover stable on the link */
 }
@@ -97,13 +97,13 @@ a.header-name:hover::after {
 
 a.menu {
   text-decoration: none;
-  color: #cbcbcb;;
+  color: #cbcbcb;
   transform: scaleY(1.2);
 }
 
 a.menu:hover {
   font-family: neue-haas-grotesk-display;
-  background-color: #cbcbcb;;
+  background-color: #cbcbcb;
   color: white;
 }
 
@@ -126,7 +126,7 @@ a.menu:hover {
   text-align: center;
   font-size: 1rem;
   transform: scaleY(1.2);
-  color: #cbcbcb;;
+  color: #cbcbcb;
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 48px;
@@ -172,7 +172,7 @@ a.menu:hover {
 }
 
 .about-text {
-  color: #cbcbcb;;
+  color: #cbcbcb;
   display: block;
   text-align: left;
   font-size: 1.5rem;
@@ -186,7 +186,7 @@ a.menu:hover {
   align-items: start;
   justify-content: center;
   aspect-ratio: 1 / 1;
-  border: 1px solid #cbcbcb;;
+  border: 1px solid #cbcbcb;
   width: 100%;
   height: 100%;
   position: relative;
@@ -200,7 +200,7 @@ a.menu:hover {
   flex-direction: column;
   align-items: start;
   justify-content: start;
-  border: 1px solid #cbcbcb;;
+  border: 1px solid #cbcbcb;
   grid-column: span 2;
   aspect-ratio: 2 / 1;
   height: 100%;
@@ -225,9 +225,10 @@ a.menu:hover {
   user-select: none;
 }
 
+/* northwestern university, made */
 .about-text:hover {
   font-family: neue-haas-grotesk-display;
-  background-color: #cbcbcb;;
+  background-color: #cbcbcb;
   color: white;
 }
 
@@ -242,7 +243,7 @@ a.menu:hover {
 }
 
 .grid:hover {
-  background-color: #cbcbcb;;
+  background-color: #cbcbcb;
   color: white;
 }
 
@@ -262,10 +263,11 @@ a.menu:hover {
   padding: 48px 0;
 }
 
+/* underlines in pages */
 .subtitle {
   display: flex;
   top: 0;
-  border-bottom: 1px solid #cbcbcb;;
+  border-bottom: 1px solid #cbcbcb;
   height: 48px;
   user-select: none;
   padding-left: 48px;
@@ -300,12 +302,12 @@ a.project {
   width: fit-content;
   padding: 0 4px 0 4px;
   transform: scaleY(1.2);
-  color: #cbcbcb;;
+  color: #cbcbcb;
 }
 
 a.project:hover {
   font-family: neue-haas-grotesk-display;
-  background-color: #cbcbcb;;
+  background-color: #cbcbcb;
   color: white;
 }
 
@@ -504,7 +506,7 @@ video {
   max-width: none;
   max-height: none;
   background: white;
-  border: 1px solid lightgrey;
+  border: 1px solid #cbcbcb;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -514,7 +516,7 @@ video {
   max-width: none;
   max-height: none;
   background: black;
-  border: 1px solid lightgrey;
+  border: 1px solid #cbcbcb;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   display: none;
   /* hidden by default; JS will toggle */
@@ -530,9 +532,9 @@ video {
   height: 48px;
   font-size: 32px;
   line-height: 1;
-  color: lightgrey;
+  color: #cbcbcb;
   background: transparent;
-  border: 1px solid lightgrey;
+  border: 1px solid #cbcbcb;
   cursor: pointer;
   user-select: none;
 }
