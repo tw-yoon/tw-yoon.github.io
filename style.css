@@ -9,8 +9,8 @@ body,
 html {
   height: 100%;
   width: 100%;
-  color: lightgrey;
-  background-color: transparent;
+  color: #cbcbcb;
+  background-color: ivory;
   font-family: neue-haas-grotesk-display, sans-serif;
 }
 
@@ -23,7 +23,7 @@ html::-webkit-scrollbar {
 }
 
 ::selection {
-  background-color: lightgrey;
+  background-color: #cbcbcb;;
   color: white;
 }
 
@@ -33,12 +33,12 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid #cbcbcb;;
   height: 48px;
   user-select: none;
   z-index: 2000;
   position: fixed;
-  background-color: blue;
+  background-color: ivory;
 }
 
 a.header-name,
@@ -47,7 +47,7 @@ a.header-name-index {
   font-size: 3rem;
   transform: scaleY(1.2);
   text-decoration: none;
-  color: lightgrey;
+  color: #cbcbcb;;
 }
 
 a.header-name:hover,
@@ -97,13 +97,13 @@ a.header-name:hover::after {
 
 a.menu {
   text-decoration: none;
-  color: lightgray;
+  color: #cbcbcb;;
   transform: scaleY(1.2);
 }
 
 a.menu:hover {
   font-family: neue-haas-grotesk-display;
-  background-color: lightgrey;
+  background-color: #cbcbcb;;
   color: white;
 }
 
@@ -111,7 +111,7 @@ a.menu:hover {
   text-align: center;
   font-size: 1rem;
   transform: scaleY(1.2);
-  color: lightgrey;
+  color: #cbcbcb;
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 48px;
@@ -126,7 +126,7 @@ a.menu:hover {
   text-align: center;
   font-size: 1rem;
   transform: scaleY(1.2);
-  color: lightgrey;
+  color: #cbcbcb;;
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 48px;
@@ -172,7 +172,7 @@ a.menu:hover {
 }
 
 .about-text {
-  color: lightgrey;
+  color: #cbcbcb;;
   display: block;
   text-align: left;
   font-size: 1.5rem;
@@ -186,7 +186,7 @@ a.menu:hover {
   align-items: start;
   justify-content: center;
   aspect-ratio: 1 / 1;
-  border: 1px solid lightgray;
+  border: 1px solid #cbcbcb;;
   width: 100%;
   height: 100%;
   position: relative;
@@ -200,7 +200,7 @@ a.menu:hover {
   flex-direction: column;
   align-items: start;
   justify-content: start;
-  border: 1px solid lightgray;
+  border: 1px solid #cbcbcb;;
   grid-column: span 2;
   aspect-ratio: 2 / 1;
   height: 100%;
@@ -227,7 +227,7 @@ a.menu:hover {
 
 .about-text:hover {
   font-family: neue-haas-grotesk-display;
-  background-color: lightgrey;
+  background-color: #cbcbcb;;
   color: white;
 }
 
@@ -242,7 +242,7 @@ a.menu:hover {
 }
 
 .grid:hover {
-  background-color: 	#36454F;
+  background-color: #cbcbcb;;
   color: white;
 }
 
@@ -265,7 +265,7 @@ a.menu:hover {
 .subtitle {
   display: flex;
   top: 0;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid #cbcbcb;;
   height: 48px;
   user-select: none;
   padding-left: 48px;
@@ -300,12 +300,12 @@ a.project {
   width: fit-content;
   padding: 0 4px 0 4px;
   transform: scaleY(1.2);
-  color: lightgrey;
+  color: #cbcbcb;;
 }
 
 a.project:hover {
   font-family: neue-haas-grotesk-display;
-  background-color: lightgrey;
+  background-color: #cbcbcb;;
   color: white;
 }
 
