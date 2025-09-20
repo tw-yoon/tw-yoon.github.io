@@ -66,7 +66,7 @@ document.querySelectorAll(".gltf-viewer").forEach((container) => {
 
   const loader = new GLTFLoader();
   const dracoLoader = new DRACOLoader();
-  dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.6/');
+  dracoLoader.setDecoderPath('/glb/drc/');
   loader.setDRACOLoader(dracoLoader);
   let loadedObject = null;
 
