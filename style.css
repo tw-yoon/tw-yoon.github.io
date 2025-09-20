@@ -507,7 +507,7 @@ video {
   max-height: none;
   background: white;
   border: 1px solid #cbcbcb;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); */
 }
 
 .lightbox video {
@@ -517,16 +517,14 @@ video {
   max-height: none;
   background: black;
   border: 1px solid #cbcbcb;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); */
   display: none;
   /* hidden by default; JS will toggle */
 }
 
 .lightbox-close {
   position: absolute;
-  top: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%);
+  left: calc(100% - 48px);
   margin: 0;
   width: 48px;
   height: 48px;
@@ -540,7 +538,8 @@ video {
 }
 
 .lightbox-close:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: #cbcbcb;
+  color: white;
 }
 
 /* Give images a hint they’re zoomable */
