@@ -38,7 +38,7 @@ header {
   user-select: none;
   z-index: 2000;
   position: fixed;
-  background-color: red;
+  background-color: blue;
 }
 
 a.header-name,
@@ -242,7 +242,7 @@ a.menu:hover {
 }
 
 .grid:hover {
-  background-color: lightgrey;
+  background-color: 	#36454F;
   color: white;
 }
 

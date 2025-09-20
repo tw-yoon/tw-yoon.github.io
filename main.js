@@ -2,6 +2,7 @@
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { RGBELoader } from "three/addons/loaders/RGBELoader.js";
 
@@ -65,6 +66,7 @@ document.querySelectorAll(".gltf-viewer").forEach((container) => {
     });
 
   const loader = new GLTFLoader();
+  loader.setMeshoptDecoder(MeshoptDecoder);
   const dracoLoader = new DRACOLoader();
   dracoLoader.setDecoderPath('/glb/drc/');
   loader.setDRACOLoader(dracoLoader);
