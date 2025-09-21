@@ -581,3 +581,27 @@ video {
     /* remove zoom cursor */
   }
 }
+.grid-hover-label {
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  font-family: neue-haas-grotesk-display, serif;
+  transform: scaleY(1.2);
+  z-index: 4000;
+  opacity: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.grid:hover .grid-hover-label {
+  opacity: 1;
+}
