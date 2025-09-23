@@ -158,6 +158,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeAllBtn = document.getElementById("close-all");
   const dropdowns = document.querySelectorAll(".dropdown");
 
+  // Initially open all dropdowns on page load
+  dropdowns.forEach(d => {
+    d.classList.add("expanded");
+    d.classList.remove("collapsed");
+  });
+
   openAllBtn.addEventListener("click", () => {
     dropdowns.forEach(d => {
       d.classList.add("expanded");
